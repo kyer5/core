@@ -16,7 +16,7 @@ public class AppConfig { // 애플리케이션의 실제 동작에 필요한 구
 
     @Bean // 메서드가 스프링 컨테이너에 등록됨
     public MemberService memberService() {
-        return new MemberServiceImpl(memberRepository());
+        return new MemberServiceImpl(memberRepository()); // 고객 요청이 올 때마다 객체가 생성됨
     }
 
     @Bean
